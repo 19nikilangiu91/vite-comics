@@ -3,6 +3,7 @@ export default {
     name: "AppHeader",
     data() {
         return {
+            logo: "./src/assets/img/dc-logo.png",
             links: [
                 {
                     text: "CHARACTERS",
@@ -67,7 +68,7 @@ export default {
             <nav>
                 <div class="logo">
                     <a href="#">
-                        <img src="../assets/img/dc-logo.png" alt="Dc-logo">
+                        <img :src="logo" :alt="logo">
                     </a>
                 </div>
                 <li v-for="(link, index) in links" :key="index">
@@ -83,15 +84,11 @@ export default {
 <style lang="scss" scoped>
 header {
     width: 100%;
-    // DEBUG
-    background-color: red;
+    background-color: white;
 
     .container {
         width: 80%;
         margin: 0 auto;
-        // DEBUG
-        background-color: yellow;
-
 
         nav {
             display: flex;
@@ -100,6 +97,7 @@ header {
 
             .logo {
                 width: 50%;
+                padding: 10px;
             }
 
             li,
