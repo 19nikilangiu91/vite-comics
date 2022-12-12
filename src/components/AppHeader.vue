@@ -63,40 +63,51 @@ export default {
 
 <template>
     <header>
-        <nav>
-            <div class="logo">
-                <a href="#">
-                    <img src="../assets/img/dc-logo.png" alt="Dc-logo">
-                </a>
-            </div>
-            <li v-for="(link, index) in links" :key="index">
-                <a :href="link.url">
-                    {{ link.text }}
-                </a>
-            </li>
-        </nav>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="#">
+                        <img src="../assets/img/dc-logo.png" alt="Dc-logo">
+                    </a>
+                </div>
+                <li v-for="(link, index) in links" :key="index">
+                    <a :href="link.url">
+                        {{ link.text }}
+                    </a>
+                </li>
+            </nav>
+        </div>
     </header>
 </template>
 
 <style lang="scss" scoped>
 header {
-    margin: 0 auto;
-    width: 80%;
+    width: 100%;
+    // DEBUG
+    background-color: red;
 
-    nav {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        // DEBUG
+        background-color: yellow;
 
-        .logo {
-            width: 50%;
-        }
 
-        li,
-        a {
-            list-style-type: none;
-            text-decoration: none;
-            margin: 3px;
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .logo {
+                width: 50%;
+            }
+
+            li,
+            a {
+                list-style-type: none;
+                text-decoration: none;
+                margin: 3px;
+            }
         }
     }
 }
