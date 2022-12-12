@@ -71,11 +71,13 @@ export default {
                         <img :src="logo" :alt="logo">
                     </a>
                 </div>
-                <li v-for="(link, index) in links" :key="index">
-                    <a :href="link.url">
-                        {{ link.text }}
-                    </a>
-                </li>
+                <ul>
+                    <li v-for="(link, index) in links" :key="index">
+                        <a :class="{ active: links.current }" :href="link.url">
+                            {{ link.text }}
+                        </a>
+                    </li>
+                </ul>
             </nav>
         </div>
     </header>
@@ -100,11 +102,22 @@ header {
                 padding: 10px;
             }
 
-            li,
-            a {
-                list-style-type: none;
-                text-decoration: none;
-                margin: 3px;
+            ul {
+                display: flex;
+                list-style: none;
+
+                li a {
+                    text-decoration: none;
+                    margin-left: 15px;
+                    padding-bottom: 50px;
+
+
+                    &.active,
+                    &:hover {
+                        color: #0282f9;
+                        border-bottom: 10px solid #0282f9;
+                    }
+                }
             }
         }
     }
