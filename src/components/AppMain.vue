@@ -47,7 +47,7 @@ export default {
 
             <section class="main-loges">
                 <div v-for="(card, index) in cards" :key="index" class="card">
-                    <img :src="card.image" alt="">
+                    <img :src="card.image" :alt="'card ' + (index)">
                     <h6>{{ card.content }}</h6>
                 </div>
             </section>
@@ -77,7 +77,7 @@ main {
         }
 
         .main-loges {
-            width: 70%;
+            width: 80%;
             margin: 0 auto;
             display: flex;
             justify-content: center;
