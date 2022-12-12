@@ -29,6 +29,8 @@ a {
   color: $primary;
 }
 
+li,
+h3,
 h6,
 button {
   color: $secondary;
