@@ -16,4 +16,8 @@ export default {
 <style lang="scss">
 @use './styles/partials/variables' as*;
 @use './styles/partials/general.scss' as*;
+
+li a {
+  color: $primary;
+}
 </style>
