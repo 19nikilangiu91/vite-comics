@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppMain from './components/AppMain.vue'
+import ListProduct from './components/ListProduct.vue'
 import AppFooter from './components/AppFooter.vue'
 
 
@@ -8,6 +9,7 @@ export default {
   components: {
     AppHeader,
     AppMain,
+    ListProduct,
     AppFooter
   }
 }
@@ -17,6 +19,7 @@ export default {
 <template>
   <AppHeader />
   <AppMain />
+  <ListProduct />
   <AppFooter />
 </template>
 
