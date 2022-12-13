@@ -1,63 +1,66 @@
 <script>
 export default {
     name: "AppHeader",
-    data() {
-        return {
-            logo: "./src/assets/img/dc-logo.png",
-            links: [
-                {
-                    text: "CHARACTERS",
-                    url: "#",
-                    current: "true",
-                },
-                {
-                    text: "COMICS",
-                    url: "#",
-                    current: "false",
-                },
-                {
-                    text: "MOVIES",
-                    url: "#",
-                    current: "false",
-                },
-                {
-                    text: "TV",
-                    url: "#",
-                    current: "false",
-                },
-                {
-                    text: "GAMES",
-                    url: "#",
-                    current: "false",
-                },
-                {
-                    text: "COLLECTIBLES",
-                    url: "#",
-                    current: "false",
-                },
-                {
-                    text: "VIDEOS",
-                    url: "#",
-                    current: "false",
-                },
-                {
-                    text: "FANS",
-                    url: "#",
-                    current: "false",
-                },
-                {
-                    text: "NEWS",
-                    url: "#",
-                    current: "false",
-                },
-                {
-                    text: "SHOP",
-                    url: "#",
-                    current: "false",
-                }
-            ]
-        }
+    props: {
+        links: Array,
     }
+    // data() {
+    //     return {
+    //         logo: "./src/assets/img/dc-logo.png",
+    //         links: [
+    //             {
+    //                 text: "CHARACTERS",
+    //                 url: "#",
+    //                 current: "true",
+    //             },
+    //             {
+    //                 text: "COMICS",
+    //                 url: "#",
+    //                 current: "false",
+    //             },
+    //             {
+    //                 text: "MOVIES",
+    //                 url: "#",
+    //                 current: "false",
+    //             },
+    //             {
+    //                 text: "TV",
+    //                 url: "#",
+    //                 current: "false",
+    //             },
+    //             {
+    //                 text: "GAMES",
+    //                 url: "#",
+    //                 current: "false",
+    //             },
+    //             {
+    //                 text: "COLLECTIBLES",
+    //                 url: "#",
+    //                 current: "false",
+    //             },
+    //             {
+    //                 text: "VIDEOS",
+    //                 url: "#",
+    //                 current: "false",
+    //             },
+    //             {
+    //                 text: "FANS",
+    //                 url: "#",
+    //                 current: "false",
+    //             },
+    //             {
+    //                 text: "NEWS",
+    //                 url: "#",
+    //                 current: "false",
+    //             },
+    //             {
+    //                 text: "SHOP",
+    //                 url: "#",
+    //                 current: "false",
+    //             }
+    //         ]
+    //     }
+    // }
 }
 
 </script>
@@ -68,7 +71,7 @@ export default {
             <nav>
                 <div class="logo">
                     <a href="#">
-                        <img :src="logo" :alt="logo">
+                        <img src="/src/assets/img/dc-logo.png" alt="logo">
                     </a>
                 </div>
                 <ul>
