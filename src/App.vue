@@ -1,5 +1,6 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
+import AppJumbotron from './components/AppJumbotron.vue'
 import AppMain from './components/AppMain.vue'
 import ListProduct from './components/ListProduct.vue'
 import AppFooter from './components/AppFooter.vue'
@@ -8,8 +9,9 @@ import AppFooter from './components/AppFooter.vue'
 export default {
   components: {
     AppHeader,
-    AppMain,
+    AppJumbotron,
     ListProduct,
+    AppMain,
     AppFooter
   }
 }
@@ -18,8 +20,9 @@ export default {
 
 <template>
   <AppHeader />
-  <AppMain />
+  <AppJumbotron />
   <ListProduct />
+  <AppMain />
   <AppFooter />
 </template>
 
