@@ -1,4 +1,5 @@
 <script>
+// Importo i "components"
 import AppHeader from './components/AppHeader.vue'
 import AppJumbotron from './components/AppJumbotron.vue'
 import AppMain from './components/AppMain.vue'
@@ -7,6 +8,7 @@ import AppFooter from './components/AppFooter.vue'
 
 
 export default {
+  // Esporto i "components"
   components: {
     AppHeader,
     AppJumbotron,
@@ -14,6 +16,8 @@ export default {
     AppMain,
     AppFooter
   },
+
+  // Esporto i data da "AppHeader" per collegare la "Nav" con "Ul" di "AppFooter"
   data() {
     return {
 
@@ -75,7 +79,10 @@ export default {
 
 </script>
 
+
 <template>
+  <!-- Richiamo i "components" -->
+  <!-- Collego l'array "links" dicendo che è uguale a "menu" che sarebbe l'array in data -->
   <AppHeader :links="menu" />
   <AppJumbotron />
   <ListProduct />
@@ -83,6 +90,7 @@ export default {
   <AppFooter />
 </template>
 
+<!-- Inserisco i due "@use" e "lang='scss'" -->
 <style lang="scss">
 @use './styles/partials/variables' as*;
 @use './styles/partials/general.scss' as*;
