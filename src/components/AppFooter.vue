@@ -3,7 +3,6 @@ export default {
     name: "AppFooter",
     data() {
         return {
-            // bgFooter: "./src/assets/img/footer-bg.jpg",
             bgLogo: "./src/assets/img/dc-logo-bg.png",
             loges: [
                 {
@@ -177,7 +176,6 @@ export default {
                         </li>
                     </ul>
                 </div>
-                <!-- <img :src="bgFooter" alt="image background" class="bg-footer"> -->
                 <img :src="bgLogo" alt="image dc logo background" class="bg-logo">
             </section>
 
