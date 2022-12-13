@@ -3,23 +3,23 @@ export default {
     name: "AppFooter",
     data() {
         return {
-            bgLogo: "./src/assets/img/dc-logo-bg.png",
+            bgLogo: "/img/dc-logo-bg.png",
             loges: [
                 {
-                    image: "./src/assets/img/footer-facebook.png",
+                    image: "/img/footer-facebook.png",
                 },
                 {
-                    image: "./src/assets/img/footer-twitter.png",
+                    image: "/img/footer-twitter.png",
                 },
                 {
-                    image: "./src/assets/img/footer-youtube.png",
+                    image: "/img/footer-youtube.png",
 
                 },
                 {
-                    image: "./src/assets/img/footer-pinterest.png",
+                    image: "/img/footer-pinterest.png",
                 },
                 {
-                    image: "./src/assets/img/footer-periscope.png",
+                    image: "/img/footer-periscope.png",
                 }
             ],
             dcComics: [
@@ -143,6 +143,7 @@ export default {
                 <div class="lists">
                     <ul>
                         <h3>DC COMICS</h3>
+                        <!-- Creo un v-for per la "ul" richiamando l'array "dcComics" -->
                         <li v-for="(link, index) in dcComics" :key="index">
                             <a :href="link.url">
                                 {{ link.content }}
@@ -151,6 +152,7 @@ export default {
                         <div>
                             <ul class="special-list">
                                 <h3>SHOP</h3>
+                                <!-- Creo un v-for per la "ul" richiamando l'array "shop" -->
                                 <li v-for="(link, index) in shop" :key="index">
                                     <a :href="link.url">
                                         {{ link.content }}
@@ -161,6 +163,7 @@ export default {
                     </ul>
                     <ul>
                         <h3>DC</h3>
+                        <!-- Creo un v-for per la "ul" richiamando l'array "dc" -->
                         <li v-for="(link, index) in dc" :key="index">
                             <a :href="link.url">
                                 {{ link.content }}
@@ -169,6 +172,7 @@ export default {
                     </ul>
                     <ul>
                         <h3>SITES</h3>
+                        <!-- Creo un v-for per la "ul" richiamando l'array "sites" -->
                         <li v-for="(link, index) in sites" :key="index">
                             <a :href="link.url">
                                 {{ link.content }}
@@ -176,15 +180,16 @@ export default {
                         </li>
                     </ul>
                 </div>
-                <img :src="bgLogo" alt="image dc logo background" class="bg-logo">
+                <img :src="bgLogo" :alt="bgLogo" class="bg-logo">
             </section>
 
             <section class="footer-down">
                 <button>SIGN-UP NOW!</button>
                 <ul>
                     <h3><strong>FOLLOW US</strong></h3>
+                    <!-- Creo un v-for per il "logo" richiamando l'array "loges" -->
                     <li v-for="(logo, index) in loges" :key="index">
-                        <img :src="logo.image" :alt="'logo ' + (index)">
+                        <img :src="logo.image" :alt="logo.image">
                     </li>
                 </ul>
             </section>
@@ -199,7 +204,7 @@ footer {
     background-color: #303030;
 
     .container-footer {
-        background-image: url(./src/assets/img/footer-bg.jpg);
+        background-image: url(../img/footer-bg.jpg);
         background-repeat: no-repeat;
         background-size: cover;
         width: 100%;

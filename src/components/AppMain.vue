@@ -3,29 +3,28 @@ export default {
     name: "AppMain",
     data() {
         return {
-            jumbotron: "./src/assets/img/jumbotron.jpg",
             cards: [
                 {
-                    image: "./src/assets/img/buy-comics-digital-comics.png",
+                    image: "/img/buy-comics-digital-comics.png",
                     content: "DIGITAL COMICS",
 
                 },
                 {
-                    image: "./src/assets/img/buy-comics-merchandise.png",
+                    image: "/img/buy-comics-merchandise.png",
                     content: "DC MERCHANDISE",
                 },
                 {
-                    image: "./src/assets/img/buy-comics-subscriptions.png",
+                    image: "/img/buy-comics-subscriptions.png",
                     content: "SUBSCRPTION",
 
                 },
                 {
-                    image: "./src/assets/img/buy-comics-shop-locator.png",
+                    image: "/img/buy-comics-shop-locator.png",
                     content: "COMIC SHOP LOCATOR",
 
                 },
                 {
-                    image: "./src/assets/img/buy-dc-power-visa.svg",
+                    image: "/img/buy-dc-power-visa.svg",
                     content: "DC POWER VISA",
 
                 }
@@ -40,8 +39,9 @@ export default {
     <main>
         <div class="container-main">
             <section class="main-loges">
+                <!-- Creo un v-for per le "card" richiamando l'array "cards" -->
                 <div v-for="(card, index) in cards" :key="index" class="card">
-                    <img :src="card.image" :alt="'card ' + (index)">
+                    <img :src="card.image" :alt="card.image">
                     <h6>{{ card.content }}</h6>
                 </div>
             </section>

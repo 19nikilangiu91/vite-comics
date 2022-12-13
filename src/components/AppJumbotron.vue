@@ -3,7 +3,7 @@ export default {
     name: "AppMain",
     data() {
         return {
-            jumbotron: "./src/assets/img/jumbotron.jpg",
+            jumbotron: "/img/jumbotron.jpg",
         }
     }
 }
@@ -15,7 +15,7 @@ export default {
         <div class="container-main">
             <section class="main-content">
                 <div>
-                    <img :src="jumbotron" alt="jumbotron" class="jumbotron">
+                    <img :src="jumbotron" :alt="jumbotron" class="jumbotron">
                 </div>
             </section>
         </div>

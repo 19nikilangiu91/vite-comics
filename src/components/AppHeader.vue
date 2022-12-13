@@ -1,12 +1,13 @@
 <script>
 export default {
     name: "AppHeader",
+    // Creo il "props" richiamando "links" che collegherò nel template <AppHeader/>
     props: {
         links: Array,
     }
     // data() {
     //     return {
-    //         logo: "./src/assets/img/dc-logo.png",
+    //         logo: "/img/dc-logo.png",
     //         links: [
     //             {
     //                 text: "CHARACTERS",
@@ -71,10 +72,11 @@ export default {
             <nav>
                 <div class="logo">
                     <a href="#">
-                        <img src="/src/assets/img/dc-logo.png" alt="logo">
+                        <img src="/img/dc-logo.png" alt="logo">
                     </a>
                 </div>
                 <ul>
+                    <!-- Creo un v-for per la nav richiamando l'array "links" -->
                     <li v-for="(link, index) in links" :key="index">
                         <a :class="{ active: links.current }" :href="link.url">
                             {{ link.text }}

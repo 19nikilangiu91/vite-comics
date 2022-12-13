@@ -1,8 +1,10 @@
 <script>
+// Importo il "components ProductCard".
 import ProductCard from './ProductCard.vue'
 
 export default {
     name: "ListProduct",
+    // Dichiaro il "components ProductCard".
     components: {
         ProductCard,
     },
@@ -94,6 +96,7 @@ export default {
         <div class="ticket">CURRENT SERIES</div>
         <div class="boxes container">
             <!-- Card -->
+            <!-- Creo un v-for richiamando il tag "ProductCard" e l'array "products" -->
             <ProductCard v-for="(product, index) in products" :key="index" :details="product" />
         </div>
         <div class="button">LOAD MORE</div>
