@@ -91,51 +91,59 @@ export default {
 
 <template>
     <section class="products">
-        <div>CURRENT SERIES</div>
+        <div class="ticket">CURRENT SERIES</div>
         <div class="boxes container">
             <!-- Card -->
             <ProductCard v-for="(product, index) in products" :key="index" :details="product" />
-
-            <!-- <div class="prod-card">
-                <img src="https://www.dccomics.com/sites/default/files/styles/covers192x291/public/comic-covers/2018/09/AC1000_DLX_162-001_HD_5ba13723281ab0.37845353.jpg?itok=ZsI-C5eX"
-                    alt="">
-                <h3>"Action Comics"</h3>
-            </div> -->
         </div>
-
+        <div class="button">LOAD MORE</div>
     </section>
 
 </template>
 
 <style lang="scss" scoped>
 .products {
-    background-color: red;
-    min-height: 500px;
+    background-color: #1c1c1c;
 
     .container {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
         width: 75%;
+        min-height: 750px;
         margin: 0 auto;
-        // background-color: yellow;
-
-        // .boxes {
-        //     display: flex;
-        //     flex-wrap: wrap;
-
-        // }
 
         .prod-card {
             margin: 5px;
             width: calc((100% / 6) - 10px);
-            // background-color: blue;
 
             img {
                 width: 100%;
                 height: 250px;
             }
         }
+    }
+
+    .ticket {
+        width: 10%;
+        padding: 10px;
+        position: relative;
+        bottom: 25px;
+        left: 168px;
+        text-align: center;
+        background-color: #0282f9;
+        color: white;
+    }
+
+    .button {
+        width: 10%;
+        margin: 0 auto;
+        padding: 10px;
+        position: relative;
+        bottom: 50px;
+        text-align: center;
+        background-color: #0282f9;
+        color: white;
     }
 }
 </style>
