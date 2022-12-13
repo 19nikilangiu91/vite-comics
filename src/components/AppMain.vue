@@ -39,12 +39,6 @@ export default {
 <template>
     <main>
         <div class="container-main">
-            <section class="main-content">
-                <div>
-                    <img :src="jumbotron" alt="jumbotron" class="jumbotron">
-                </div>
-            </section>
-
             <section class="main-loges">
                 <div v-for="(card, index) in cards" :key="index" class="card">
                     <img :src="card.image" :alt="'card ' + (index)">
@@ -58,8 +52,7 @@ export default {
 <style lang="scss" scoped>
 main {
     width: 100%;
-    // DEBUG
-    background-color: red;
+
 
     .container-main {
         width: 100%;
