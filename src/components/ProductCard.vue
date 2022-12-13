@@ -2,7 +2,7 @@
 
 export default {
     name: "ProductCard",
-    promps: ["details"]
+    props: ["details"]
 }
 
 </script>
@@ -10,8 +10,8 @@ export default {
 <template>
     <!-- Card -->
     <div class="prod-card">
-        <img :src="details" alt="">
-        <h3>{{ details }}</h3>
+        <img :src="details.thumb" alt="">
+        <h3>{{ details.series }}</h3>
     </div>
 </template>
 
@@ -24,6 +24,11 @@ export default {
     img {
         width: 100%;
         height: 250px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 15px;
     }
 }
 </style>
